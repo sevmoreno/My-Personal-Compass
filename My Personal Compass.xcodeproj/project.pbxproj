@@ -14,6 +14,7 @@
 		655BD83F22C6D2C8005F29EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 655BD83E22C6D2C8005F29EE /* Assets.xcassets */; };
 		655BD84222C6D2C8005F29EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 655BD84022C6D2C8005F29EE /* LaunchScreen.storyboard */; };
 		655BD85022C71BB3005F29EE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655BD84F22C71BB3005F29EE /* MapViewController.swift */; };
+		655BD85222C7CDCD005F29EE /* interestLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655BD85122C7CDCC005F29EE /* interestLocations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		655BD84122C6D2C8005F29EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		655BD84322C6D2C8005F29EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		655BD84F22C71BB3005F29EE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		655BD85122C7CDCC005F29EE /* interestLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = interestLocations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				655BD83422C6D2C7005F29EE /* AppDelegate.swift */,
 				655BD83622C6D2C7005F29EE /* InterestViewController.swift */,
 				655BD83822C6D2C7005F29EE /* Main.storyboard */,
+				655BD85122C7CDCC005F29EE /* interestLocations.swift */,
 				655BD84F22C71BB3005F29EE /* MapViewController.swift */,
 				655BD83E22C6D2C8005F29EE /* Assets.xcassets */,
 				655BD84022C6D2C8005F29EE /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				655BD85222C7CDCD005F29EE /* interestLocations.swift in Sources */,
 				655BD83D22C6D2C7005F29EE /* My_Personal_Compass.xcdatamodeld in Sources */,
 				655BD85022C71BB3005F29EE /* MapViewController.swift in Sources */,
 				655BD83722C6D2C7005F29EE /* InterestViewController.swift in Sources */,

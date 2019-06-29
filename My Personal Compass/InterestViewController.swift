@@ -20,24 +20,59 @@ class InterestViewController: UIViewController, UITableViewDelegate,UITableViewD
         tablaInterest.dataSource = self
         
         
+        // ---- HOW TO INTIAL AN OBJET WITH COREDATE PAPU
+        
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+        //  interestLocations.shared.lat = 12.0
+        let prueba = KeywordK(context:managedContext)
+        prueba.descripcion = "Hey"
+        prueba.estado = false
+        
+        interestLocations.shared.collection.append(prueba)
+        
+        
+        //----------------------------------------
+        
         
         // Do any additional setup after loading the view.
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return interestLocations.shared.collection.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath)
+   
+   if interestLocations.shared.collection.count > 0
         
-   if let label = cell.viewWithTag(700) as? UILabel
+   {
+   
+    if let label = cell.viewWithTag(700) as? UILabel
+    
         {
-            label.text = "Wewes"
+            label.text = interestLocations.shared.collection[indexPath.item].descripcion
+            
         }
         
+        if interestLocations.shared.collection[indexPath.item].estado == true
+        {
+            cell.accessoryType = .checkmark
+        }
+        else
+        {
+            cell.accessoryType = .none
+        }
+    }
         return cell
     }
 
@@ -46,7 +81,6 @@ class InterestViewController: UIViewController, UITableViewDelegate,UITableViewD
         if let cell = tableView.cellForRow(at: indexPath)
             
         {
-            print ("Seleccion" )
             if cell.accessoryType == .none {
                 cell.accessoryType = .checkmark
             } else

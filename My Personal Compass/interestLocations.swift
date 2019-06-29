@@ -6,6 +6,7 @@
 //  Copyright © 2019 Juan Moreno. All rights reserved.
 //
 import UIKit
+import CoreData
 
 class interestLocations {
     
@@ -20,6 +21,9 @@ class interestLocations {
     
    // var pinSelected = Pin ()
     
+    
+   var collection = [KeywordK] ()
+
     
     
     

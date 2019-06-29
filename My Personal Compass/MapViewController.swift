@@ -8,6 +8,7 @@
 
 import Foundation
 import MapKit
+import CoreData
 
 class MapViewController: UIViewController {
     
@@ -28,9 +29,8 @@ class MapViewController: UIViewController {
       
         checkLocationAuthorizationStatus()
         locationManager.requestLocation()
-        
-      //  interestLocations.shared.lat = 12.0
-        
+      
+
         
      //   locationInfo = locationManager.location?.coordinate.latitude
      //   print(locationInfo.)

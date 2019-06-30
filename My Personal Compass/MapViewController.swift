@@ -29,30 +29,19 @@ class MapViewController: UIViewController {
         locationManager.delegate = self
         mapConnection.delegate = self
       
+       
+        
         checkLocationAuthorizationStatus()
         locationManager.requestLocation()
         mapConnection.addAnnotations(interestLocations.shared.locationsGoogle)
         
 
-        
-     //   locationInfo = locationManager.location?.coordinate.latitude
-     //   print(locationInfo.)
-
-        
+  
     }
     
     override func viewDidLoad() {
         
-        // show artwork on map
-    /*
-   let artwork = poinOfInterest(title: "King David Kalakaua",
-                              locationName: "Waikiki Gateway Park",
-                              keywordK: "Sculpture",
-                              coordinate: CLLocationCoordinate2D(latitude: 21.283921, longitude: -157.831661))
-        */
-//let artwork = interestLocations.shared.locationsGoogle.first
-     //   mapConnection.addAnnotation(artwork!)
-      //  mapConnection.addAnnotations(interestLocations.shared.locationsGoogle)
+
         
         
     }
@@ -146,6 +135,7 @@ extension MapViewController: MKMapViewDelegate {
             view.canShowCallout = true
             view.calloutOffset = CGPoint(x: -5, y: 5)
             view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            view.markerTintColor = annotation.markerTintColor
         }
         return view
     }

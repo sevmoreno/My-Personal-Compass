@@ -203,26 +203,46 @@ class InterestViewController: UIViewController, UITableViewDelegate,UITableViewD
             
             let managedContext =
                 appDelegate.persistentContainer.viewContext
+         
             
             let fetchrequest: NSFetchRequest<KeywordK> = KeywordK.fetchRequest()
-            let predicate = NSPredicate (format: "descripcion == %@" ,interestLocations.shared.collection[indexPath.item].descripcion! )
-            fetchrequest.predicate = predicate
+            // let predicate = NSPredicate (format: "pin == %@" ,photoInfo.shared.pinSelected)
+            // fetchrequest.predicate = predicate
             
-            if let interestToChange = try? managedContext.fetch(fetchrequest)
-                
+            let predicatephoto = NSPredicate(format: "descripcion == %@", interestLocations.shared.collection[indexPath.item].descripcion!)
+          //  let predicateURL = NSPredicate(format: "estado == %@", interestLocations.shared.collection[indexPath.item].estado)
+            
+            let subpredicates: [NSPredicate]
+            
+          //  subpredicates = [ predicatephoto, predicateURL ]
+            
+            subpredicates = [ predicatephoto]
+            let compoundPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: subpredicates)
+            
+            fetchrequest.predicate = compoundPredicate
+            
+            let fotoToDelete = try? managedContext.fetch(fetchrequest)
+            
+          //  if let interestToChange = try? managedContext.fetch(fetchrequest)
+            if fotoToDelete == nil
+            {} else
             {
+         
+                let objetToUpdate = fotoToDelete?.first as! NSManagedObject
                 
-                if cell.accessoryType == .none {
+                if  cell.accessoryType == .none {
                     cell.accessoryType = .checkmark
-                    interestToChange.first?.estado = true
+                    objetToUpdate.setValue(true, forKey: "estado")
                     interestLocations.shared.collection[indexPath.item].estado = true
                     
                 } else
                 {
                     cell.accessoryType = .none
-                    interestToChange.first?.estado = false
+                    objetToUpdate.setValue(false, forKey: "estado")
                     interestLocations.shared.collection[indexPath.item].estado = false
                 }
+                /*
+                 }
                
                 let entity =
                     NSEntityDescription.entity(forEntityName: "KeywordK",
@@ -233,7 +253,8 @@ class InterestViewController: UIViewController, UITableViewDelegate,UITableViewD
                 
                 // 3
                 person.setValue(interestToChange.first?.estado, forKeyPath: "estado")
-
+*/
+                
                 
                 // 4
                 do {
@@ -249,6 +270,58 @@ class InterestViewController: UIViewController, UITableViewDelegate,UITableViewD
         
         tableView.deselectRow(at: indexPath, animated: true)
         
+    }
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            
+            
+            guard let appDelegate =
+                UIApplication.shared.delegate as? AppDelegate else {
+                    return
+            }
+            
+            let managedContext =
+                appDelegate.persistentContainer.viewContext
+            
+            
+            let fetchrequest: NSFetchRequest<KeywordK> = KeywordK.fetchRequest()
+            // let predicate = NSPredicate (format: "pin == %@" ,photoInfo.shared.pinSelected)
+            // fetchrequest.predicate = predicate
+            
+            let predicatephoto = NSPredicate(format: "descripcion == %@", interestLocations.shared.collection[indexPath.item].descripcion!)
+            //  let predicateURL = NSPredicate(format: "estado == %@", interestLocations.shared.collection[indexPath.item].estado)
+            
+            let subpredicates: [NSPredicate]
+            
+            //  subpredicates = [ predicatephoto, predicateURL ]
+            
+            subpredicates = [ predicatephoto]
+            let compoundPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: subpredicates)
+            
+            fetchrequest.predicate = compoundPredicate
+            
+            let fotoToDelete = try? managedContext.fetch(fetchrequest)
+            
+            if fotoToDelete == nil
+            {
+                
+            } else {
+                
+               if let interest = fotoToDelete!.first
+               {
+                managedContext.delete(interest)
+                    
+                    try? managedContext.save()
+                    
+                }
+            }
+            
+            
+            interestLocations.shared.collection.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+        }
     }
 
     

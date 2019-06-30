@@ -101,7 +101,7 @@ class ggoogleApi {
              
             let poi = poinOfInterest (title: interestLocations.shared.locationSelectKeyword,
                                       locationName: elemento.name,
-                                      keywordK: "Sculpture",
+                                      keywordC: "Sculpture",
                                       coordinate: CLLocationCoordinate2D(latitude: elemento.geometry.location.lat, longitude: elemento.geometry.location.lng))
             
             interestLocations.shared.locationsGoogle.append(poi)

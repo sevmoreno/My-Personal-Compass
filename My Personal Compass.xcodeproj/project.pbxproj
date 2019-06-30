@@ -15,6 +15,9 @@
 		655BD84222C6D2C8005F29EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 655BD84022C6D2C8005F29EE /* LaunchScreen.storyboard */; };
 		655BD85022C71BB3005F29EE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655BD84F22C71BB3005F29EE /* MapViewController.swift */; };
 		655BD85222C7CDCD005F29EE /* interestLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655BD85122C7CDCC005F29EE /* interestLocations.swift */; };
+		655BD85822C81903005F29EE /* googleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655BD85722C81903005F29EE /* googleApi.swift */; };
+		655BD85A22C8328D005F29EE /* googleRespone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655BD85922C8328D005F29EE /* googleRespone.swift */; };
+		65A6C70E22C921CC0083D866 /* poinOfInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A6C70D22C921CC0083D866 /* poinOfInterest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		655BD84322C6D2C8005F29EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		655BD84F22C71BB3005F29EE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		655BD85122C7CDCC005F29EE /* interestLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = interestLocations.swift; sourceTree = "<group>"; };
+		655BD85722C81903005F29EE /* googleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = googleApi.swift; sourceTree = "<group>"; };
+		655BD85922C8328D005F29EE /* googleRespone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = googleRespone.swift; sourceTree = "<group>"; };
+		65A6C70D22C921CC0083D866 /* poinOfInterest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poinOfInterest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +68,11 @@
 			children = (
 				655BD83422C6D2C7005F29EE /* AppDelegate.swift */,
 				655BD83622C6D2C7005F29EE /* InterestViewController.swift */,
+				655BD85722C81903005F29EE /* googleApi.swift */,
+				655BD85922C8328D005F29EE /* googleRespone.swift */,
 				655BD83822C6D2C7005F29EE /* Main.storyboard */,
 				655BD85122C7CDCC005F29EE /* interestLocations.swift */,
+				65A6C70D22C921CC0083D866 /* poinOfInterest.swift */,
 				655BD84F22C71BB3005F29EE /* MapViewController.swift */,
 				655BD83E22C6D2C8005F29EE /* Assets.xcassets */,
 				655BD84022C6D2C8005F29EE /* LaunchScreen.storyboard */,
@@ -144,9 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65A6C70E22C921CC0083D866 /* poinOfInterest.swift in Sources */,
 				655BD85222C7CDCD005F29EE /* interestLocations.swift in Sources */,
 				655BD83D22C6D2C7005F29EE /* My_Personal_Compass.xcdatamodeld in Sources */,
+				655BD85A22C8328D005F29EE /* googleRespone.swift in Sources */,
 				655BD85022C71BB3005F29EE /* MapViewController.swift in Sources */,
+				655BD85822C81903005F29EE /* googleApi.swift in Sources */,
 				655BD83722C6D2C7005F29EE /* InterestViewController.swift in Sources */,
 				655BD83522C6D2C7005F29EE /* AppDelegate.swift in Sources */,
 			);

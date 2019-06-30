@@ -7,6 +7,7 @@
 //
 import UIKit
 import CoreData
+import MapKit
 
 class interestLocations {
     
@@ -21,9 +22,15 @@ class interestLocations {
     
    // var pinSelected = Pin ()
     
+   var locationsGoogle = [poinOfInterest] ()
     
    var collection = [KeywordK] ()
 
+   var googleresults = [ggoogleApi] ()
+    
+    
+    var locationSelectKeyword: String = "Beer"
+    var locationSelectStatus: Bool =  true
     
     
     

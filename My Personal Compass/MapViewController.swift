@@ -9,6 +9,7 @@
 import Foundation
 import MapKit
 import CoreData
+import Contacts
 
 class MapViewController: UIViewController {
     
@@ -148,4 +149,13 @@ extension MapViewController: MKMapViewDelegate {
         }
         return view
     }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
+                 calloutAccessoryControlTapped control: UIControl) {
+        let location = view.annotation as! poinOfInterest
+        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+        location.mapItem().openInMaps(launchOptions: launchOptions)
+    }
+
+   
 }

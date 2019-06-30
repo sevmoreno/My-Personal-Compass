@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 import MapKit
+import Contacts
+
 
 class ggoogleApi {
     

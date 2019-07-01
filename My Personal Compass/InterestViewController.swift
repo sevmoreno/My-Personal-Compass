@@ -98,8 +98,7 @@ class InterestViewController: UIViewController, UITableViewDelegate,UITableViewD
             appDelegate.persistentContainer.viewContext
         
         let fetchrequest: NSFetchRequest<KeywordK> = KeywordK.fetchRequest()
-        //   let predicate = NSPredicate (format: "pin == %@" ,photoInfo.shared.pinSelected )
-        //   fetchrequest.predicate = predicate
+
         
         if let listaInterest = try? managedContext.fetch(fetchrequest)
             
@@ -108,15 +107,7 @@ class InterestViewController: UIViewController, UITableViewDelegate,UITableViewD
             
             interestLocations.shared.collection = listaInterest
             
-            /*
-             var  c = 0
-             repeat {
-             let temp = toSaveDisplay(Imagen: listaPhotos[c].imagen, ImagenURL: listaPhotos[c].imageURL, photoID: listaPhotos[c].photoID, userID: listaPhotos[c].userID)
-             photoInfo.shared.collectionImage.append(temp)
-             c = c + 1
-             } while c < listaInterest.count
-             
-             */
+ 
         }
         
         DispatchQueue.main.async {
@@ -206,15 +197,13 @@ class InterestViewController: UIViewController, UITableViewDelegate,UITableViewD
          
             
             let fetchrequest: NSFetchRequest<KeywordK> = KeywordK.fetchRequest()
-            // let predicate = NSPredicate (format: "pin == %@" ,photoInfo.shared.pinSelected)
-            // fetchrequest.predicate = predicate
+
             
             let predicatephoto = NSPredicate(format: "descripcion == %@", interestLocations.shared.collection[indexPath.item].descripcion!)
-          //  let predicateURL = NSPredicate(format: "estado == %@", interestLocations.shared.collection[indexPath.item].estado)
+
             
             let subpredicates: [NSPredicate]
-            
-          //  subpredicates = [ predicatephoto, predicateURL ]
+
             
             subpredicates = [ predicatephoto]
             let compoundPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: subpredicates)
@@ -241,22 +230,7 @@ class InterestViewController: UIViewController, UITableViewDelegate,UITableViewD
                     objetToUpdate.setValue(false, forKey: "estado")
                     interestLocations.shared.collection[indexPath.item].estado = false
                 }
-                /*
-                 }
-               
-                let entity =
-                    NSEntityDescription.entity(forEntityName: "KeywordK",
-                                               in: managedContext)!
-                
-                let person = NSManagedObject(entity: entity,
-                                             insertInto: managedContext)
-                
-                // 3
-                person.setValue(interestToChange.first?.estado, forKeyPath: "estado")
-*/
-                
-                
-                // 4
+
                 do {
                     try managedContext.save()
                
@@ -349,14 +323,3 @@ extension InterestViewController: UITextFieldDelegate
     
     
 }
-/*
- 
- locationManager.requestLocation()
- locationManager.desiredAccuracy = kCLLocationAccuracyBest
- locationManager.distanceFilter = kCLDistanceFilterNone
- locationManager.startUpdatingLocation()
- 
- mapLink.showsUserLocation = true
- 
- */
-

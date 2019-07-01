@@ -33,7 +33,7 @@ class MapViewController: UIViewController {
         
         checkLocationAuthorizationStatus()
         locationManager.requestLocation()
-        mapConnection.addAnnotations(interestLocations.shared.locationsGoogle)
+   //     mapConnection.addAnnotations(interestLocations.shared.locationsGoogle)
         
 
   
@@ -93,28 +93,32 @@ extension MapViewController : CLLocationManagerDelegate {
             print("location:: \(locations.first?.coordinate.latitude)")
             centerMapOnLocation(location: initialLocation)
             
-
+         
             interestLocations.shared.lat =  locations.first!.coordinate.latitude as! Double
             interestLocations.shared.lon =  locations.first!.coordinate.longitude as! Double
             
-            ggoogleApi.requestData { (data, response, error) in
-                
-                print(data)
-                ggoogleApi.readData(data: data!)
+            var counter = 0
+            
+            repeat {
+            interestLocations.shared.locationSelectKeyword = interestLocations.shared.collection[counter].descripcion!
+            let tofind =  interestLocations.shared.collection[counter].descripcion!
+      
+                ggoogleApi.requestData (palabraK: tofind) { (data, response, error, palabra) in
+                ggoogleApi.readData(data: data!, palabra: tofind)
                 self.mapConnection.reloadInputViews()
-                print(interestLocations.shared.locationsGoogle.last?.coordinate)
-                
-                
-            }
+                    }
+            counter = counter + 1
+            } while counter < interestLocations.shared.collection.count
             
         mapConnection.addAnnotations(interestLocations.shared.locationsGoogle)
             
             
         }
-        
-    }
-    
+
 }
+
+}
+    
 
 extension MapViewController: MKMapViewDelegate {
     // 1
@@ -149,3 +153,4 @@ extension MapViewController: MKMapViewDelegate {
 
    
 }
+

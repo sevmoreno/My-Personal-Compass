@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oXE-Uq-ExP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I6B-Z2-vRN">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Interest View Controller-->
+        <!--Item-->
         <scene sceneID="TAY-gC-yfp">
             <objects>
                 <viewController id="oXE-Uq-ExP" customClass="InterestViewController" customModule="My_Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LT9-f2-riX">
-                                <rect key="frame" x="0.0" y="83" width="414" height="666"/>
+                                <rect key="frame" x="0.0" y="83" width="414" height="617"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="cellID" id="gdv-ec-ATY">
@@ -48,14 +48,14 @@
                                 <sections/>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Sk-fK-XBG">
-                                <rect key="frame" x="20" y="771" width="374" height="30"/>
+                                <rect key="frame" x="20" y="723" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtt-ua-Eyn">
-                                <rect key="frame" x="151" y="809" width="113" height="30"/>
+                                <rect key="frame" x="151" y="774" width="113" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add your interes"/>
                                 <connections>
@@ -72,6 +72,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8ZD-Sn-Chv"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="TMR-rh-utB"/>
                     <connections>
                         <outlet property="tablaInterest" destination="LT9-f2-riX" id="gyq-t0-490"/>
                         <outlet property="textInput" destination="7Sk-fK-XBG" id="GdE-Tl-RC3"/>
@@ -79,9 +80,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tkM-L4-E58" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-26.086956521739133" y="26.785714285714285"/>
+            <point key="canvasLocation" x="884.05797101449286" y="26.785714285714285"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Item-->
         <scene sceneID="68k-N7-yEt">
             <objects>
                 <viewController id="AOc-J5-vgm" customClass="MapViewController" customModule="My_Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
@@ -94,7 +95,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crn-th-dbq">
-                                <rect key="frame" x="108" y="801" width="199" height="30"/>
+                                <rect key="frame" x="108" y="736" width="199" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Discover interest arround me"/>
                                 <connections>
@@ -105,13 +106,32 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LZs-dc-Zaw"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="ilL-pt-Ant"/>
                     <connections>
                         <outlet property="mapConnection" destination="Be2-Do-WeF" id="Fih-Ba-PEl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G9w-YT-qxc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="672.46376811594212" y="23.4375"/>
+            <point key="canvasLocation" x="1570" y="27"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="vkv-HV-HAC">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="I6B-Z2-vRN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uk2-Y3-bMv">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="oXE-Uq-ExP" kind="relationship" relationship="viewControllers" id="DNk-Yr-jCh"/>
+                        <segue destination="AOc-J5-vgm" kind="relationship" relationship="viewControllers" id="qmX-eQ-aME"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qPx-xH-h3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="24.776785714285712"/>
         </scene>
     </scenes>
 </document>

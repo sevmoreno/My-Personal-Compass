@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		651C5B6322E16BBA0042273E /* ListaViewControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651C5B6222E16BBA0042273E /* ListaViewControlller.swift */; };
+		651C5B6522E171BB0042273E /* contenidoListaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651C5B6422E171BB0042273E /* contenidoListaCell.swift */; };
+		651C5B6722E26E3C0042273E /* detailsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651C5B6622E26E3C0042273E /* detailsListViewController.swift */; };
+		6527EFCB22CBDF7500707ECA /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6527EFCA22CBDF7500707ECA /* Reachability.framework */; };
+		654A7D9F22DE7D0A0086486C /* detailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A7D9E22DE7D0A0086486C /* detailsViewController.swift */; };
+		654A7DA122DE84B20086486C /* googledetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A7DA022DE84B20086486C /* googledetails.swift */; };
 		655BD83522C6D2C7005F29EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655BD83422C6D2C7005F29EE /* AppDelegate.swift */; };
 		655BD83722C6D2C7005F29EE /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655BD83622C6D2C7005F29EE /* InterestViewController.swift */; };
 		655BD83A22C6D2C7005F29EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 655BD83822C6D2C7005F29EE /* Main.storyboard */; };
@@ -18,9 +24,18 @@
 		655BD85822C81903005F29EE /* googleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655BD85722C81903005F29EE /* googleApi.swift */; };
 		655BD85A22C8328D005F29EE /* googleRespone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655BD85922C8328D005F29EE /* googleRespone.swift */; };
 		65A6C70E22C921CC0083D866 /* poinOfInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A6C70D22C921CC0083D866 /* poinOfInterest.swift */; };
+		E03B9EE081602DE2C24089FF /* Pods_My_Personal_Compass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D6E64202141C96019E78E4 /* Pods_My_Personal_Compass.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23FC8F5B05B2A236C6C4A097 /* Pods-My Personal Compass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Personal Compass.debug.xcconfig"; path = "Target Support Files/Pods-My Personal Compass/Pods-My Personal Compass.debug.xcconfig"; sourceTree = "<group>"; };
+		29D6E64202141C96019E78E4 /* Pods_My_Personal_Compass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_Personal_Compass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		651C5B6222E16BBA0042273E /* ListaViewControlller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaViewControlller.swift; sourceTree = "<group>"; };
+		651C5B6422E171BB0042273E /* contenidoListaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contenidoListaCell.swift; sourceTree = "<group>"; };
+		651C5B6622E26E3C0042273E /* detailsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailsListViewController.swift; sourceTree = "<group>"; };
+		6527EFCA22CBDF7500707ECA /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
+		654A7D9E22DE7D0A0086486C /* detailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailsViewController.swift; sourceTree = "<group>"; };
+		654A7DA022DE84B20086486C /* googledetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = googledetails.swift; sourceTree = "<group>"; };
 		655BD83122C6D2C7005F29EE /* My Personal Compass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Personal Compass.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		655BD83422C6D2C7005F29EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		655BD83622C6D2C7005F29EE /* InterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +49,7 @@
 		655BD85722C81903005F29EE /* googleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = googleApi.swift; sourceTree = "<group>"; };
 		655BD85922C8328D005F29EE /* googleRespone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = googleRespone.swift; sourceTree = "<group>"; };
 		65A6C70D22C921CC0083D866 /* poinOfInterest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poinOfInterest.swift; sourceTree = "<group>"; };
+		8093B9FADAC33E4A7AE06661 /* Pods-My Personal Compass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Personal Compass.release.xcconfig"; path = "Target Support Files/Pods-My Personal Compass/Pods-My Personal Compass.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +57,61 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6527EFCB22CBDF7500707ECA /* Reachability.framework in Frameworks */,
+				E03B9EE081602DE2C24089FF /* Pods_My_Personal_Compass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09364E30B3CB59FBF3015019 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23FC8F5B05B2A236C6C4A097 /* Pods-My Personal Compass.debug.xcconfig */,
+				8093B9FADAC33E4A7AE06661 /* Pods-My Personal Compass.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6527EFC922CBDF7400707ECA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6527EFCA22CBDF7500707ECA /* Reachability.framework */,
+				29D6E64202141C96019E78E4 /* Pods_My_Personal_Compass.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		654A7DA222DFA5D30086486C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				654A7DA022DE84B20086486C /* googledetails.swift */,
+				655BD85922C8328D005F29EE /* googleRespone.swift */,
+				655BD85122C7CDCC005F29EE /* interestLocations.swift */,
+				65A6C70D22C921CC0083D866 /* poinOfInterest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		654A7DA322DFA6010086486C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				655BD83622C6D2C7005F29EE /* InterestViewController.swift */,
+				655BD84F22C71BB3005F29EE /* MapViewController.swift */,
+				654A7D9E22DE7D0A0086486C /* detailsViewController.swift */,
+				651C5B6622E26E3C0042273E /* detailsListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		655BD82822C6D2C7005F29EE = {
 			isa = PBXGroup;
 			children = (
 				655BD83322C6D2C7005F29EE /* My Personal Compass */,
 				655BD83222C6D2C7005F29EE /* Products */,
+				6527EFC922CBDF7400707ECA /* Frameworks */,
+				09364E30B3CB59FBF3015019 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,14 +126,13 @@
 		655BD83322C6D2C7005F29EE /* My Personal Compass */ = {
 			isa = PBXGroup;
 			children = (
+				654A7DA322DFA6010086486C /* Controller */,
+				654A7DA222DFA5D30086486C /* Model */,
 				655BD83422C6D2C7005F29EE /* AppDelegate.swift */,
-				655BD83622C6D2C7005F29EE /* InterestViewController.swift */,
 				655BD85722C81903005F29EE /* googleApi.swift */,
-				655BD85922C8328D005F29EE /* googleRespone.swift */,
 				655BD83822C6D2C7005F29EE /* Main.storyboard */,
-				655BD85122C7CDCC005F29EE /* interestLocations.swift */,
-				65A6C70D22C921CC0083D866 /* poinOfInterest.swift */,
-				655BD84F22C71BB3005F29EE /* MapViewController.swift */,
+				651C5B6422E171BB0042273E /* contenidoListaCell.swift */,
+				651C5B6222E16BBA0042273E /* ListaViewControlller.swift */,
 				655BD83E22C6D2C8005F29EE /* Assets.xcassets */,
 				655BD84022C6D2C8005F29EE /* LaunchScreen.storyboard */,
 				655BD84322C6D2C8005F29EE /* Info.plist */,
@@ -89,9 +148,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 655BD84622C6D2C8005F29EE /* Build configuration list for PBXNativeTarget "My Personal Compass" */;
 			buildPhases = (
+				93D3DA5D0855E84D12A90C60 /* [CP] Check Pods Manifest.lock */,
 				655BD82D22C6D2C7005F29EE /* Sources */,
 				655BD82E22C6D2C7005F29EE /* Frameworks */,
 				655BD82F22C6D2C7005F29EE /* Resources */,
+				6527EFCC22CBDFD700707ECA /* Run Script */,
+				CD241EB29ED94E858A6457F7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,19 +210,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6527EFCC22CBDFD700707ECA /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Reachability.framework",
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		93D3DA5D0855E84D12A90C60 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-My Personal Compass-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD241EB29ED94E858A6457F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-My Personal Compass/Pods-My Personal Compass-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-My Personal Compass/Pods-My Personal Compass-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-My Personal Compass/Pods-My Personal Compass-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		655BD82D22C6D2C7005F29EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				651C5B6722E26E3C0042273E /* detailsListViewController.swift in Sources */,
 				65A6C70E22C921CC0083D866 /* poinOfInterest.swift in Sources */,
 				655BD85222C7CDCD005F29EE /* interestLocations.swift in Sources */,
+				651C5B6322E16BBA0042273E /* ListaViewControlller.swift in Sources */,
+				651C5B6522E171BB0042273E /* contenidoListaCell.swift in Sources */,
 				655BD83D22C6D2C7005F29EE /* My_Personal_Compass.xcdatamodeld in Sources */,
 				655BD85A22C8328D005F29EE /* googleRespone.swift in Sources */,
 				655BD85022C71BB3005F29EE /* MapViewController.swift in Sources */,
 				655BD85822C81903005F29EE /* googleApi.swift in Sources */,
 				655BD83722C6D2C7005F29EE /* InterestViewController.swift in Sources */,
+				654A7D9F22DE7D0A0086486C /* detailsViewController.swift in Sources */,
 				655BD83522C6D2C7005F29EE /* AppDelegate.swift in Sources */,
+				654A7DA122DE84B20086486C /* googledetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,17 +432,24 @@
 		};
 		655BD84722C6D2C8005F29EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23FC8F5B05B2A236C6C4A097 /* Pods-My Personal Compass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3U7Q992ZFB;
+				DEVELOPMENT_TEAM = 5766G78FC9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "My Personal Compass/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "XDFd.My-Personal-Compass";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sevmoreno.MyPersonalCompass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -322,17 +457,24 @@
 		};
 		655BD84822C6D2C8005F29EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8093B9FADAC33E4A7AE06661 /* Pods-My Personal Compass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3U7Q992ZFB;
+				DEVELOPMENT_TEAM = 5766G78FC9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "My Personal Compass/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "XDFd.My-Personal-Compass";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sevmoreno.MyPersonalCompass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
